@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<launch>
+  <node name="publisher" pkg="air_dataset_publisher" type="PublishDataset.py" args="-d /path/to/dataset" />
+  <node name="display" pkg="image_view" type="image_view" args="compressed">
+    <remap from="image" to="/camera/image" />
+  </node>
+</launch>
